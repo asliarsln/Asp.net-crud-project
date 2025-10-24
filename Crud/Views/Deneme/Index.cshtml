@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Öğrenci Kayıt</title>
+</head>
+<body>
+    <h1>Öğrenci Kayıt Formu</h1>
+    
+    @if(ViewBag.Message != null)
+    {
+        <p style="color: green;">@ViewBag.Message</p>
+    }
+
+    <form method="post" asp-controller="Deneme" asp-action="Index">
+        <div>
+            <label>İsim:</label>
+            <input type="text" name="name" required />
+        </div>
+        <br />
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" required />
+        </div>
+        <br />
+        <button type="submit">Kaydet</button>
+    </form>
+</body>
+</html>
